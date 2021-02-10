@@ -555,6 +555,11 @@ characters in the sentence capitalized.
 Sample input: Hello world Practice makes man perfect
 Expected output: HELLO WORLD PRACTICE MAKES MAN PERFECT
 
+f = 'Hello world Practice makes man perfect'
+upper_case = f.upper()
+print(upper_case)
+
+
 6. Define a function that can receive two integral numbers in string form and compute their sum and
 print it in the console.
 
@@ -669,6 +674,163 @@ print('after f?')
 a()
 
 
+TASK FIVE
+FILE HANDLING AND EXCEPTION HANDLING
 
+
+1. Write a program in Python to allow the error of syntax to be handled using exception handling.
+HINT: Use SyntaxError
+
+ages = {'Anjali': 24, 'Hari': 24, 'michael': 43}
+print('Michael is {ages["michael"]} years old.')
+
+2. Write a program in Python to allow the user to open a file by using the argv module. If the
+entered name is incorrect throw an exception and ask them to enter the name again. Make sure
+to use read only mode.
+
+Ans:
+
+def add(*a):
+    print(sum(a))
+add(1)
+add(1,2,3)
+add(*[1,2,3],*(3,4,5))
+
+Results: 
+1
+6
+18
+
+3. Write a program to handle an error if the user entered a number more than four digits it should
+return “The length is too short/long !!! Please provide only four digits”
+
+Ans:
+
+n = 1234
+try:
+    num1 = int(input("Please enter your 4 digits no: "))
+except ValueError:
+    print (num1, "The length is too short/long !!! Please provide only four digits: ”)
+
+
+4. Create a login page backend to ask users to enter the username and password. Make sure to
+ask for a Re-Type Password and if the password is incorrect give chance to enter it again but it
+should not be more than 3 times.
+
+from getpass import getpass
+
+print ("Please select a password: ")
+passwd = getpass()
+
+print ("Please re-type your password: ")
+if passwd == getpass():
+    print ("password created")
+else:
+    print ("Password does not match. Please try again")
+
+5. Go through the link provided below to understand finally and raise concept:
+https://www.programiz.com/python-programming/exception-handling
+
+Finally	- Sometimes we have an important code in our program that needs to be executed irrespective of whether or not the exception is thrown. This code is placed in a special block starting with the “Finally” keyword. The Finally block follows the Try-catch block.
+
+Throw-	The keyword “throw” is used to throw the exception explicitly.
+
+6. Read doc.txt file using Python File handling concept and return only the even length string from
+the file. Consider the content of doc.txt as given below:
+Hello I am a file
+Where you need to return the data string
+Which is of even length
+Make sure you return the content in The same link as it is present.
+
+
+f=open("doc.txt", "w")
+f.write("Hello I am a file")
+f.write("\nWhere you need to return the data string")
+f.write("\nWhich is of even length")
+f.write("\nMake sure you return the content in The same link as it is present."
+)
+f.close()
+
+or
+
+with open("doc.txt", "r") as f:
+    print(f.read())
+
+
+TASK SIX
+GENERATORS, LIST COMPREHENSION AND DECORATORS
+
+1. Write a program in Python to find out the character in a string which is uppercase using list
+comprehension.
+
+# initializing string  
+test_str = "This is Comprehensive List"
+  
+# printing original string  
+print("The original string is : " + str(test_str)) 
+  
+# Extract Upper Case Characters  
+# Using list comprehension + isupper() 
+res = [char for char in test_str if char.isupper()] 
+  
+
+# printing result  
+print("The uppercase characters in string are : " + str(res)) 
+
+Results:
+
+The uppercase characters in string are : ['T', 'C', 'L']
+
+2. Write a program to construct a dictionary from the two lists containing the names of students and
+their corresponding subjects. The dictionary should map the students with their respective subjects.
+Let’s see how to do this using for loops and dictionary comprehension.
+HINT - Use Zip function also
+Sample input: students = ['Smit', 'Jaya', 'Rayyan'] subjects = ['CSE', 'Networking', 'Operating System']
+Expected output: {‘Smit’ : ’CSE’ , ’Jaya’ : ’Networking’ , ’Rayyan’ : ’Operating System’}
+
+Ans:
+students = ['Smit', 'Jaya', 'Rayyan']
+subjects = ['CSE', 'Networking', 'Operating System']
+d = {k:v for k,v in zip(students,subjects)}
+print(d)
+
+Results:
+{'Smit': 'CSE', 'Jaya': 'Networking', 'Rayyan': 'Operating System'}
+
+3. Learn More about Yield, next and Generators
+
+Ans:
+
+Yield is a keyword that is used like return, except the function will return a generator.
+A function with yield, when called, returns a Generator
+
+Generators are iterators, a kind of iterable you can only iterate over once.
+
+Python 3 has a built-in function next() which retrieves the next item from the iterator by calling its __next__() method. 
+
+4. Write a program in Python using generators to reverse the string.
+Input String = “Consultadd Training”
+
+Ans:
+string = "Consultadd Training"
+print  ("The reversed string(using loops) is : ",end="") 
+print (reverse(string))
+
+5. Write an example on decorators.
+A decorator takes a function, extends it and returns. Yes, a function can return a function.
+
+Ans:
+def hello(func):                                                                                            
+    def inner():                                                                                            
+        print("Hello ")                                                                                     
+        func()                                                                                              
+    return inner                                                                                            
+                                                                                                            
+def name():                                                                                                 
+    print("Anjali")                                                                                          
+                                                                                                            
+                                                                                                            
+obj = hello(name)                                                                                           
+obj()   
 
 
