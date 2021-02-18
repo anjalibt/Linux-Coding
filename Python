@@ -1,0 +1,100 @@
+This is my python 1 assignments
+
+1. 
+Kishans-MBP:~ kishanthapaliya$ python3
+Python 3.9.1 (v3.9.1:1e5d33e9b9, Dec  7 2020, 12:10:52) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = 1
+>>> b=2.01
+>>> c='string'
+>>> 
+
+2.
+string
+Kishans-MBP:code kishanthapaliya$ 
+Kishans-MBP:code kishanthapaliya$ python3
+Python 3.9.1 (v3.9.1:1e5d33e9b9, Dec  7 2020, 12:10:52) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> age = 20
+>>> age
+20
+>>> sentence = "my name is Anjali"
+>>> sentence
+'my name is Anjali'
+>>> 
+ 
+
+3.
+>>> x = 10
+>>> y = 5
+>>> x = x + y
+>>> 
+>>> x
+15
+
+4.
+ Python 2
+print 'Python', python_version()
+print 'Hello, World!'
+print('Hello, World!')
+print "text", ; print 'print more text on the same line'
+Python 2.7.6
+Hello, World!
+Hello, World!
+text print more text on the same line
+
+
+Python 3
+print('Python', python_version())
+print('Hello, World!')
+
+print("some text,", end="")
+print(' print more text on the same line')
+Python 3.4.1
+Hello, World!
+some text, print more text on the same line
+print 'Hello, World!'
+  File "<ipython-input-3-139a7c5835bd>", line 1
+    print 'Hello, World!'
+                        ^
+SyntaxError: invalid syntax
+
+5. 
+>>> x = 3
+>>> y = 8
+>>> z = x + y
+>>> z
+11
+>>> u = 30
+>>> z = z + u
+>>> z
+41
+>>> 
+
+6. 
+>>> print ("string to float:", float ("3.4"))
+string to float: 3.4
+>>> print ("float to int:", int (3.4))
+float to int: 3
+>>> 
+
+7.Upper CamelCase: name = SnakeCaseName
+ Lower CamelCase: name = notCamelCase
+SnakeCase: name = 'snake_case_name'
+UPPERCASE: THE GIVEN STRING IN UPPERCASE = HELLO WORLD
+
+
+8. 
+It will not change. 
+
+'a'is a string, so-called because it contains a string of letters. You (and the interpreter) can identify strings because they are enclosed in quotation marks.
+
+
+If you are not sure what type a value has, the interpreter can tell you.
+
+>>> type("a")
+<type 'str'>
+
+
